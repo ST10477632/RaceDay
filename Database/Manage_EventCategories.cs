@@ -1,14 +1,15 @@
 ﻿using RaceDay.Models;
+using System.Data.SqlClient;
 
 namespace RaceDay.Database
 {//start of namespace
-    public class ManageEventCategories
+    public class Manage_EventCategories
     {//start of class
 
 
 
-        /connection string
-        private string connection_string = @"Data source=(localdb)\api_both;database=raceday;";
+        //connection string
+        private string connection_string = @"Data source=(localdb)\prog2;database=RaceDay;";
 
         //select used by the get methods
         private string select_query = @"select ec.event_category_id, ec.event_id, ec.category_id, c.category_name,

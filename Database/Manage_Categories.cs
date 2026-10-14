@@ -9,7 +9,7 @@ namespace RaceDay.Database
 
 
         //connection string
-        private string connection_string = @"Data source=(localdb)\api_both;database=raceday;";
+        private string connection_string = @"Data source=(localdb)\prog2;database=RaceDay;";
 
         //method to get all categories
         public List<Category> get_all()
