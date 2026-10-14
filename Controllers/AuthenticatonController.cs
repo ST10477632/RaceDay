@@ -5,11 +5,11 @@ using RaceDay.Models;
 using Microsoft.Extensions.Configuration;
 
 namespace RaceDay.Controllers
-{
+{//start of namespace
     [Route("api/[controller]")]
     [ApiController]
     public class AuthenticatonController : ControllerBase
-    {
+    {//start of class
 
         private readonly IConfiguration _config;
 
@@ -53,9 +53,7 @@ namespace RaceDay.Controllers
             return message;
         }//end of register
 
-        /// <summary>Logs in and starts a session that stores the user id and role.</summary>
-        /// <response code="200">Login successful.</response>
-        /// <response code="401">Incorrect email or password.</response>
+        
         [HttpPost("login")]
         public string login(string email, string password)
         {//start of login
@@ -76,8 +74,7 @@ namespace RaceDay.Controllers
             return message;
         }//end of login
 
-        /// <summary>Ends the current session.</summary>
-        /// <response code="200">Logged out.</response>
+        
         [HttpPost("logout")]
         public string logout()
         {//start of logout
@@ -85,5 +82,5 @@ namespace RaceDay.Controllers
             return "Logged out successfully...";
         }//end of logout
 
-    }
-}
+    }//end of class
+}//end of namespace

@@ -5,11 +5,11 @@ using RaceDay.Models;
 using System.Text.Json;
 
 namespace RaceDay.Controllers
-{
+{//start of namespace
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
-    {
+    {//start of class
 
         private readonly IConfiguration _config;
 
@@ -54,9 +54,7 @@ namespace RaceDay.Controllers
             return message;
         }//end of register
 
-        /// <summary>Logs in and starts a session that stores the user id and role.</summary>
-        /// <response code="200">Login successful.</response>
-        /// <response code="401">Incorrect email or password.</response>
+       
         [HttpPost("auth/login")]
         public string login(string email, string password)
         {//start of login
@@ -78,8 +76,7 @@ namespace RaceDay.Controllers
             return message;
         }//end of login
 
-        /// <summary>Ends the current session.</summary>
-        /// <response code="200">Logged out.</response>
+        
         [HttpPost("auth/logout")]
         public string logout()
         {//start of logout
@@ -87,9 +84,7 @@ namespace RaceDay.Controllers
             return "Logged out successfully...";
         }//end of logout
 
-        /// <summary>Gets the profile of the logged-in user (Participant or Organiser).</summary>
-        /// <response code="200">Profile returned.</response>
-        /// <response code="401">User is not logged in.</response>
+        
         [HttpGet("users/profile")]
         public string get_profile()
         {//start of get_profile
@@ -110,11 +105,7 @@ namespace RaceDay.Controllers
             return JsonSerializer.Serialize(user);
         }//end of get_profile
 
-        /// <summary>Updates the profile of the logged-in user.</summary>
-        /// <response code="200">Profile updated.</response>
-        /// <response code="400">Invalid information.</response>
-        /// <response code="401">User is not logged in.</response>
-        /// <response code="409">Username or email already exists.</response>
+        
         [HttpPut("users/profile")]
         public string update_profile(string first_name, string last_name, string username,
             string email, string? phone_number = null)
@@ -143,5 +134,5 @@ namespace RaceDay.Controllers
             return message;
         }//end of update_profile
 
-    }
-}
+    }//end of class
+}//end of namespace

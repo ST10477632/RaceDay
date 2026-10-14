@@ -3,9 +3,9 @@ using System.Data.SqlClient;
 using RaceDay.Controllers;
 
 namespace RaceDay.Database
-{
+{//start of namespace
     public class Manage_Authentication
-    {
+    {//start of class
 
 
         //connection string
@@ -153,5 +153,5 @@ namespace RaceDay.Database
             return context.Session.GetString("role") ?? "";
         }
 
-    }
-}
+    }//end of class
+}//end of namespace

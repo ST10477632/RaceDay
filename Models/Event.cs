@@ -6,7 +6,7 @@
 
 
         public int event_id { get; set; }
-        public string organiser_id { get; set; }
+        public int organiser_id { get; set; }
         public string event_name { get; set; } = "";
         public DateTime event_date { get; set; }
         public string location { get; set; } = "";

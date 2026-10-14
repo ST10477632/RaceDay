@@ -2,9 +2,9 @@
 using System.Data.SqlClient;
 
 namespace RaceDay.Database
-{
+{//start of namespace
     public class Manage_Events
-    {
+    {//start of class
 
 
 
@@ -247,5 +247,5 @@ namespace RaceDay.Database
             return message;
         }//end of method
 
-    }
-}
+    }//end of class
+}//end of namspace

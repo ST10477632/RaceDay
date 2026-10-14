@@ -118,11 +118,7 @@ namespace RaceDay.Controllers
             return message;
         }//end of update_event
 
-        /// <summary>Deletes an event owned by the logged-in Organiser, with its enrolments and results.</summary>
-        /// <response code="204">Event deleted.</response>
-        /// <response code="401">User is not logged in.</response>
-        /// <response code="403">Not an Organiser, or not the owner of this event.</response>
-        /// <response code="404">Event does not exist.</response>
+        
         [HttpDelete("{id:int}")]
         public string delete_event(int id)
         {//start of delete_event
