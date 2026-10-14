@@ -1,5 +1,5 @@
 ﻿namespace RaceDay.Models
-{//start of namspace
+{//start of namespace
     public class Event
     {//start of class
 
@@ -19,4 +19,4 @@
 
 
     }//end of class
-}//end of namspace
+}//end of namespace
