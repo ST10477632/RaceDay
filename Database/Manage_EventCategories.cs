@@ -9,7 +9,8 @@ namespace RaceDay.Database
 
 
         //connection string
-        private string connection_string = @"Data source=(localdb)\prog2;database=RaceDay;";
+        private string connection_string = Environment.GetEnvironmentVariable("RACEDAY_CONNECTION")
+            ?? @"Data source=(localdb)\prog2;database=RaceDay;";
 
         //select used by the get methods
         private string select_query = @"select ec.event_category_id, ec.event_id, ec.category_id, c.category_name,

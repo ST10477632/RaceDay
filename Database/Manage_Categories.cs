@@ -9,7 +9,8 @@ namespace RaceDay.Database
 
 
         //connection string
-        private string connection_string = @"Data source=(localdb)\prog2;database=RaceDay;";
+        private string connection_string = Environment.GetEnvironmentVariable("RACEDAY_CONNECTION")
+            ?? @"Data source=(localdb)\prog2;database=RaceDay;";
 
         //method to get all categories
         public List<Category> get_all()
