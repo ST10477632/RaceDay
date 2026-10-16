@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/docs/">
+    <File Path="raceday_schema.sql" />
+  </Folder>
   <Project Path="../Test_Database/RaceDay.Tests.csproj" Id="1c591a29-fbe9-45e5-8b43-60033410621a" />
   <Project Path="RaceDay.csproj" />
 </Solution>
