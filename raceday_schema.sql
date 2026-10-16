@@ -1,8 +1,8 @@
 create database RaceDay;
-
+go
 
 use RaceDay;
-
+go
 
 create table roles(
     role_id int identity(1,1) primary key,
@@ -58,7 +58,7 @@ create table results(
     finish_time time null,
     position int null,
     result_status nvarchar(20) not null default 'Finished');
-
+go
 
 insert into roles(role_name) values('Organiser'),('Participant');
 
@@ -67,3 +67,4 @@ insert into categories(category_name, description) values
 ('Senior', 'Open senior category'),
 ('10km', '10 kilometre distance'),
 ('21km', 'Half marathon distance');
+go
