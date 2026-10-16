@@ -18,9 +18,12 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+// the test client talks plain http, so a redirect to https would turn every response into a 307
+if (!app.Environment.IsEnvironment("Testing"))
+    app.UseHttpsRedirection();
+
 app.UseSession();          // before MapControllers
-app.UseAuthorization();    // keep this if the template added it
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
