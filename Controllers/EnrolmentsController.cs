@@ -6,7 +6,6 @@ using System.Text.Json;
 
 namespace RaceDay.Controllers
 {//start of namespace
-    [Route("api/[controller]")]
     [ApiController]
     public class EnrolmentsController : ControllerBase
     {//start of class

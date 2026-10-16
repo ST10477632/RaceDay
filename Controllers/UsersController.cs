@@ -6,7 +6,6 @@ using System.Text.Json;
 
 namespace RaceDay.Controllers
 {//start of namespace
-    [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {//start of class
@@ -84,8 +83,7 @@ namespace RaceDay.Controllers
             return "Logged out successfully...";
         }//end of logout
 
-        
-        [HttpGet("users/profile")]
+        [HttpGet("/api/users/profile")]
         public string get_profile()
         {//start of get_profile
             int? user_id = HttpContext.Session.GetInt32("user_id");
@@ -105,10 +103,10 @@ namespace RaceDay.Controllers
             return JsonSerializer.Serialize(user);
         }//end of get_profile
 
-        
-        [HttpPut("users/profile")]
+
+        [HttpPut("/api/users/profile")]
         public string update_profile(string first_name, string last_name, string username,
-            string email, string? phone_number = null)
+         string email, string? phone_number = null)
         {//start of update_profile
             int? user_id = HttpContext.Session.GetInt32("user_id");
             if (user_id == null)

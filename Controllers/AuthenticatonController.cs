@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace RaceDay.Controllers
 {//start of namespace
-    [Route("api/[controller]")]
+    [Route("api/auth")]
     [ApiController]
     public class AuthenticatonController : ControllerBase
     {//start of class
