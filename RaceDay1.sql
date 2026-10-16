@@ -97,8 +97,10 @@ from event_categories ec join categories c on c.category_id = ec.category_id
 where c.category_name = '10km';
 
 
+update users
+set role_id = (select role_id from roles where role_name = 'Organiser')
+where email = 'kinsman@gmail.com';
 
+select * from users;
 
-
-
-select * from enrolments;
+select * from roles;
