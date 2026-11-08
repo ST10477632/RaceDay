@@ -2,6 +2,10 @@
   <Folder Name="/docs/">
     <File Path="raceday_schema.sql" />
   </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="../RaceDay2/RaceDay2.csproj" Id="b09c285d-f623-4967-a9c0-e551d59d42e9" />
   <Project Path="../Test_Database/RaceDay.Tests.csproj" Id="1c591a29-fbe9-45e5-8b43-60033410621a" />
   <Project Path="RaceDay.csproj" />
 </Solution>
