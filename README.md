@@ -138,7 +138,7 @@ Green build screenshot:
 
 Video presentation
 
-YouTube (unlisted): [ADD LINK HERE]
+YouTube (unlisted): [https://youtu.be/imxpIHLfMf4]
 
 AI usage disclosure
 
